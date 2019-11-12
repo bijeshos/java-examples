@@ -1,14 +1,19 @@
 package io.github.bijeshos.javaexamples.bitwise;
 
-
+/*
+    A class to demonstrate a few bitwise operations
+ */
 public class BitOperationsDemo {
     public static void main(String[] args) {
         rightShift(32, 40);
         rightShift(36, 40);
+
         checkOddOrEven(8);
         checkOddOrEven(9);
+
         leftShift(32, 40);
         leftShift(36, 40);
+
         isPowerOfTwo(-8);
         isPowerOfTwo(1);
         isPowerOfTwo(2);
@@ -21,13 +26,16 @@ public class BitOperationsDemo {
         isPowerOfTwo(32);
         isPowerOfTwo(33);
         isPowerOfTwo(34);
+
         findOddOccurringNumber();
+
         swapNumbersWithoutTempVariable(12, 20);
         swapNumbersWithoutTempVariable(82, 123);
     }
 
     /*
-        Problem statement: Swap two numbers without using any temporary variable
+        Problem statement:
+            Swap two numbers without using any temporary variable
      */
     private static void swapNumbersWithoutTempVariable(int a, int b) {
         System.out.println("Before: a:" + a + ", b:" + b);
@@ -38,9 +46,11 @@ public class BitOperationsDemo {
     }
 
     /*
-        Problem statement: Given a set of numbers where all elements occur even number of times except one number,
-        find the odd occurring number
-        bitwise XOR can be used here to find the result
+        Problem statement:
+            Given a set of numbers where all elements occur even number of times except one number,
+            find the odd occurring number.
+        Notes:
+            Bitwise XOR can be used here to find the result
      */
     private static void findOddOccurringNumber() {
         int numArray[] = {12, 12, 14, 91, 14, 14, 14};
@@ -53,9 +63,12 @@ public class BitOperationsDemo {
     }
 
     /*
-        for a number which is a power of 2, only 1 bit is set; eg: 8=00001000, 16=00010000
-        when 1 is subtracted with that number, result would have 1 in all set bits eg: 7=00000111, 15=00001111
-        a bitwise AND (&) with n and n-1 will produce 0, if n is power of 2
+        Problem statement:
+            Identify if the input number is a power of two
+        Notes:
+            For a number which is a power of 2, only 1 bit is set; eg: 8=00001000, 16=00010000.
+            When 1 is subtracted with that number, result would have 1 in all set bits eg: 7=00000111, 15=00001111
+            A bitwise AND (&) with n and n-1 will produce 0, if n is power of 2
      */
     private static void isPowerOfTwo(int unsignedNumber) {
         if (unsignedNumber > 0) {
@@ -85,8 +98,11 @@ public class BitOperationsDemo {
     }
 
     /*
-     for even numbers, last bit will always be 0 and for odd numbers, last bit will be 1.
-     value of last bit can be extracted by doing an bitwise AND (&) with the number
+     Problem statement:
+        Identify if the input number is a odd or even
+     Notes:
+        For even numbers, last bit will always be 0 and for odd numbers, last bit will be 1.
+        Value of last bit can be extracted by doing an bitwise AND (&) with the number
      */
 
     private static void checkOddOrEven(int number) {
@@ -101,7 +117,10 @@ public class BitOperationsDemo {
     }
 
     /*
-        equivalent to division by 2
+        Problem statement:
+            Divide a number by two, using bitwise operations
+        Notes:
+            Right shift is equivalent to division by 2
      */
     private static void rightShift(int number, int shiftCount) {
         //System.out.println("------------------------------------------------------");
@@ -112,7 +131,10 @@ public class BitOperationsDemo {
     }
 
     /*
-        equivalent to multiplied by 2
+        Problem statement:
+            Multiply a number by two, using bitwise operations
+        Notes:
+            Left Shift is equivalent to multiplied by 2
      */
     private static void leftShift(int number, int shiftCount) {
         //System.out.println("------------------------------------------------------");
