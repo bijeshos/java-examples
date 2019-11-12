@@ -3,7 +3,7 @@ package io.github.bijeshos.javaexamples.bitwise;
 /*
     A class to demonstrate a few bitwise operations
  */
-public class BitOperationsDemo {
+public class BitwiseOperations {
     public static void main(String[] args) {
         rightShift(32, 40);
         rightShift(36, 40);
@@ -34,8 +34,8 @@ public class BitOperationsDemo {
     }
 
     /*
-        Problem statement:
-            Swap two numbers without using any temporary variable
+    Problem statement:
+        Swap two numbers without using any temporary variable
      */
     private static void swapNumbersWithoutTempVariable(int a, int b) {
         System.out.println("Before: a:" + a + ", b:" + b);
@@ -98,13 +98,12 @@ public class BitOperationsDemo {
     }
 
     /*
-     Problem statement:
-        Identify if the input number is a odd or even
-     Notes:
-        For even numbers, last bit will always be 0 and for odd numbers, last bit will be 1.
-        Value of last bit can be extracted by doing an bitwise AND (&) with the number
+         Problem statement:
+            Identify if the input number is a odd or even
+         Notes:
+            For even numbers, last bit will always be 0 and for odd numbers, last bit will be 1.
+            Value of last bit can be extracted by doing an bitwise AND (&) with the number
      */
-
     private static void checkOddOrEven(int number) {
         //System.out.println("------------------------------------------------------");
         int result = number & 1;
