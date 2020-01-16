@@ -3,7 +3,7 @@ package io.github.bijeshos.javaexamples.bitwise;
 /*
     A class to demonstrate a few bitwise operations
  */
-public class BitwiseOperations {
+public class BitwiseOperationsDemo {
     public static void main(String[] args) {
         rightShift(32, 40);
         rightShift(36, 40);
